@@ -1,0 +1,5 @@
+"Reference","Qty","Value","DNP","Exclude from BOM","Exclude from Board","Footprint","Datasheet"
+"C101,C102,C103,C104,C105,C106,C107,C108","8","100n","","","","Capacitor_SMD:C_0402_1005Metric","~"
+"J101","1","2118714-2","","","","SoC_Hub_kicad_footprint_library:TE_2118714-2",""
+"J201,J202,J601,J603","4","Conn_02x08_Odd_Even","DNP","","","Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical","~"
+"U101","1","~","","","","SoC_Hub_kicad_footprint_library:Didactic_WB",""
