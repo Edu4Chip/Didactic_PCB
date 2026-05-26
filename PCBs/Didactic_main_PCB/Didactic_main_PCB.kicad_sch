@@ -1,0 +1,281 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "7ab892e7-3c9a-46a9-9f0b-960844e008c7")
+	(paper "A4")
+	(title_block
+		(title "Didactic PCB")
+		(date "2026-03-13")
+		(company "TAU")
+		(comment 1 "Roope Keskinen / roope.r.keskinen@tuni.fi")
+	)
+	(lib_symbols)
+	(sheet
+		(at 53.34 22.86)
+		(size 12.7 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "927ac1bd-ba10-4cf2-a8e2-3fdf0e74c439")
+		(property "Sheetname" "SysCtrl"
+			(at 53.34 22.1484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "SysCtrl.kicad_sch"
+			(at 53.34 41.2246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Didactic"
+				(path "/7ab892e7-3c9a-46a9-9f0b-960844e008c7"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 78.74 22.86)
+		(size 12.7 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "96d90de3-bb0d-49f9-9f4e-76f412c0a73d")
+		(property "Sheetname" "SysCtrl_USB"
+			(at 78.74 22.1484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "SysCtrl_USB.kicad_sch"
+			(at 78.74 41.2246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Didactic"
+				(path "/7ab892e7-3c9a-46a9-9f0b-960844e008c7"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 106.68 24.13)
+		(size 13.97 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a237e2c7-662c-48ce-bcb3-da76a798fed6")
+		(property "Sheetname" "PMOD"
+			(at 106.68 23.4184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "PMOD.kicad_sch"
+			(at 106.68 41.2246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Didactic"
+				(path "/7ab892e7-3c9a-46a9-9f0b-960844e008c7"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 53.34 49.53)
+		(size 12.7 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f23dd865-dc8d-496c-9632-e89b7667745f")
+		(property "Sheetname" "Power_SMPS"
+			(at 53.34 48.8184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 53.34 66.6246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Didactic"
+				(path "/7ab892e7-3c9a-46a9-9f0b-960844e008c7"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 105.41 48.26)
+		(size 12.7 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fd881391-9025-4aff-b51b-c17fbfaabaed")
+		(property "Sheetname" "Power_regulators"
+			(at 105.41 47.5484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "untitled.kicad_sch"
+			(at 105.41 66.6246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Didactic"
+				(path "/7ab892e7-3c9a-46a9-9f0b-960844e008c7"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 78.74 49.53)
+		(size 12.7 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fec65526-8c05-41cf-b6ba-176deec8cf32")
+		(property "Sheetname" "PowerMCU"
+			(at 78.74 48.8184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "PowerMCU.kicad_sch"
+			(at 78.74 66.6246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Field2" ""
+			(at 78.74 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "Didactic"
+				(path "/7ab892e7-3c9a-46a9-9f0b-960844e008c7"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

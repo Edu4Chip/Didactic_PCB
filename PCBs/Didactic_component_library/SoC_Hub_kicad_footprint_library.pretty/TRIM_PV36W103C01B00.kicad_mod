@@ -1,0 +1,234 @@
+(footprint "TRIM_PV36W103C01B00"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -1.825 -3.76 0)
+		(layer "F.SilkS")
+		(uuid "fa7ea92b-b497-4845-89e3-a6b575124356")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TRIM_PV36W103C01B00"
+		(at 7.065 3.76 0)
+		(layer "F.Fab")
+		(uuid "711d394e-ca2c-4ce2-96d2-22ebd3d2fd40")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b6052c3c-6141-4ef4-ad44-fd469301b65e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ded2602b-0167-4923-a124-25ebf109cb3a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -4.765 -2.42)
+		(end -4.765 2.41)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f419980c-bc34-455b-ae29-38b37a7f4d2a")
+	)
+	(fp_line
+		(start -4.765 2.41)
+		(end 4.765 2.41)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e0cdc5a6-f10b-4de3-99a1-2181653d1147")
+	)
+	(fp_line
+		(start 4.765 -2.42)
+		(end -4.765 -2.42)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "68e80a65-80dc-4c72-a546-0e9a42a4ad05")
+	)
+	(fp_line
+		(start 4.765 2.41)
+		(end 4.765 -2.42)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4c6f5929-34ab-4aed-932c-5fb6d3f2be4b")
+	)
+	(fp_circle
+		(center -5.5 0)
+		(end -5.4 0)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "e8f1832c-4cf1-4adc-a7bc-b25221494e80")
+	)
+	(fp_line
+		(start -5.015 -2.67)
+		(end -5.015 2.66)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "02ec3a48-3f45-4757-8c51-edb6c317e988")
+	)
+	(fp_line
+		(start -5.015 2.66)
+		(end 5.015 2.66)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "913a03e5-6f5f-4bad-8121-e1bc713bb714")
+	)
+	(fp_line
+		(start 5.015 -2.67)
+		(end -5.015 -2.67)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "667f9fe1-5b77-4c8f-b5ea-e164ead01653")
+	)
+	(fp_line
+		(start 5.015 2.66)
+		(end 5.015 -2.67)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8288f25e-bb02-4e10-9b25-dafb7b9b7b9f")
+	)
+	(fp_line
+		(start -4.765 -2.42)
+		(end -4.765 2.41)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dcb1972a-22ca-45b2-abe4-c44970d5484d")
+	)
+	(fp_line
+		(start -4.765 2.41)
+		(end 4.765 2.41)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "bd1c48ee-ded1-4a0e-a7e4-04dac7a4021b")
+	)
+	(fp_line
+		(start 4.765 -2.42)
+		(end -4.765 -2.42)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c11c7a29-eb8e-46aa-a096-6139bd5fffe7")
+	)
+	(fp_line
+		(start 4.765 2.41)
+		(end 4.765 -2.42)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d543f33f-3f4c-482e-81a3-e3a0da9ad115")
+	)
+	(fp_circle
+		(center -5.5 0)
+		(end -5.4 0)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "de103c61-b6a9-46e7-a7a4-833204f49da5")
+	)
+	(pad "1" thru_hole rect
+		(at -2.5 0)
+		(size 1.508 1.508)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "62a084ee-f147-4642-8def-c0ab17d7b642")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0)
+		(size 1.508 1.508)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "6afb644c-d063-442a-bcc5-c5522370feb8")
+	)
+	(pad "3" thru_hole circle
+		(at 2.5 0)
+		(size 1.508 1.508)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "3a53ffe3-989b-4747-b79a-cb1c702e16c4")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/keskiner/OneDrive - TUNI.fi/1. PhD/PCBs/SoC_HUB_Kicad_library/3D/PV36W103C01B00.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)
