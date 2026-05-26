@@ -33,6 +33,9 @@
 
 **/.metadata/
 *.zip
+./PM_MCU_software/.settings
+./PM_MCU_software/Debug
+
 
 
 
