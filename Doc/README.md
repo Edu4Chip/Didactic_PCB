@@ -1,0 +1,49 @@
+# Didactic PCB V1.0 user guide 
+This repository includes design files and documentation for Didactic PCBs and software for the power management microcontroller on the PCB.
+
+ ![Didactic PCB](./Figures/PCB_top_annotated.png)
+
+## Power and start-up
+The Didactic PCB requires external 5V source to function. The 5V can be inserted from a 5.5 mm x 2.1 mm barrel jack or from the SysCtrl Mini-USB port. Only one of these methods should be used at once. If the barrel jack and the SysCtrl Mini-USB port are used at the same time, then JP303 should be opened to disconnect the 5V power from the Mini-USB port.
+
+### Status LED
+After 5V power has been provided to the board, an LED (D303) near the SysCtrl Mini-USB port should be lit to indicate that power is being provided. LED (D702) should also be lit to indicate that always-on 3.3 V is being regulated. Finally, the Status LED (D401) should slowly blink to indicate that the microcontroller on the board is ready, and the rest of the board can be powered by pressing the PWR button (S401). After pressing the Power button, the microcontroller will enable 3.3V IO, 1.8V IO and 0.9V Core power rails and start the clock generator and finally release the reset for the Didactic chip. Successful start-up is indicated by the STATUS LED being lit and not blinking. An LED near each power rail’s source will also be lit to indicate that the power rails are enabled. 
+
+|STATUS LED pattern  |Pattern meaning                                        |
+|--------------------|-------------------------------------------------------|
+|Slowly blinking     |Board is powered, but Didactic power is off            |
+|Rapid blinking      |Didactic power is on, but fault monitoring is disabled |
+|Fully on            |Didactic is powered and clock enabled                  |
+
+### Power monitoring
+The power rails are always monitored for failure (Unless fault monitoring has been disabled). The power rails will fail if their voltage differs too much from the set amount or if too much current is being drawn from them. All power rails are immediately powered down if a failure is noticed in any of the power rails. Failure is indicated by blinking the Fault LED (D402). The failed power rail is indicated by the blinking pattern of the Fault LED (table 2). After power rail failure, the board can be repowered by pressing the PWR button.
+
+|Fault LED blink count|Failed power rail |
+|---------------------|------------------|
+|1                    |Core              |
+|2                    |IO                |
+|3                    |3.3V IO           |
+
+### Votage adjustment
+Voltage of IO and Core power rails can be adjusted with trimmers RV702 and RV701. It is recomended to disable power rail fault checking while adjusting the voltages and set new target voltages for each power rail after adjustment. More information about this can be found under the power monitor MCU section.
+
+If needed, the power regulators can be disconnected from the power rails by removing the jumpers near them (JP703, JP702, JP501 and JP502). This may be needed at the first bring-up process for each PCB as the power rail voltages may be set incorrectly. If the Didactic chip is assembled on the PCB before bring-up, the power regulators must be disconnected and adjusted. 
+
+## IO
+### SysCtrl 3.3V IO
+### Didactic 1.8V IO
+### PMOD
+
+## Power monitor MCU
+Microcontroller on the board is used to monitor and sequence the power rails and control the clock generator. The Didactic can be started by pressing the PWR button or the start-up process can be controlled using the microcontrollers virtual COM port. The COM port can be accessed by connecting a Mini-USB cable to the MCU USB port.
+
+### Virtual COM port
+Any virtual terminal software can be used to connect to Virtual COM port. Baud rate can also be freely chosen.
+
+The microcontroller will continuously print the voltage and current of all the power rails. The virtual terminal window should be made big enough so that a full line of text can fit without line changes. Commands can be typed into the virtual terminal, and all commands must be ended by pressing enter. Pressing enter will also always reprint the command list. Configuration for all power rails is shown at the bottom of the terminal and the bottom most line is updated three times a second and it shows the current voltage and power consumption of the power rails.
+
+![Didactic PCB](./Figures/Virtual_terminal.png)
+
+### Commands
+### Programming
+The microcontroller can be programmed using ST-LINK debugger using SWD interface. This can be done using 4-pin pin header (J405) or 6-pin TC2030 Tag-Connect cable.
