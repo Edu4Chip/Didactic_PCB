@@ -27,12 +27,34 @@ The power rails are always monitored for failure (Unless fault monitoring has be
 ### Votage adjustment
 Voltage of IO and Core power rails can be adjusted with trimmers RV702 and RV701. It is recomended to disable power rail fault checking while adjusting the voltages and set new target voltages for each power rail after adjustment. More information about this can be found under the power monitor MCU section.
 
-If needed, the power regulators can be disconnected from the power rails by removing the jumpers near them (JP703, JP702, JP501 and JP502). This may be needed at the first bring-up process for each PCB as the power rail voltages may be set incorrectly. If the Didactic chip is assembled on the PCB before bring-up, the power regulators must be disconnected and adjusted. 
+If needed, the power regulators can be disconnected from the power rails by removing the jumpers near them (JP703, JP702, JP501 and JP502). This may be needed aduring the first bring-up process for each PCB as the power rail voltages may be set incorrectly. If the Didactic chip is assembled on the PCB before bring-up, the power regulators must be disconnected and adjusted. 
 
 ## IO
 ### SysCtrl 3.3V IO
+All SysCtrl IOs are level shifted to 3.3V and available on header J204. The signals are level shifted using bidirectional auto direction sensing level shifters. The level shifters must be enabled using the 3V3 IO EN jumper. Because of a design mistake, the level shifters are enabled when the jumper is set to 0 and disabled when the jumper is set to 1. LED D201 near the jumper will indicate when the level shifters are enabled. Level shifted SPI signals are also connected to an SD card socket.
+
+JTAG and UART signals are also level shifted using separate unidirectional level shifters and connected to FT2232HQ USB converter. These level shifters can be enabled with UART EN (JP301) and JTAG EN (JP302) jumpers. Pinout for the FT2232HQ is shown below.
+
+|FT2232HQ pin   |Net              |
+|---------------|-----------------|
+|ADBUS0         |TCK              |
+|ADBUS1         |TDI              |
+|ADBUS2         |TDO              |
+|ADBUS3         |TMS              |
+|BDBUS0         |TX (Didactic RX) |
+|BDBUS1         |RX (Didactic TX) |
+
+
 ### Didactic 1.8V IO
+All Didactic 1.8V IO is directly accessible on pin headers J201, J202, J601 and J603. All analog pins 32-50 of Didactic are connected to ground using 0-ohm resistors. N BIAS and P BIAS are connected to ground using JP601 and JP602 jumpers.
 ### PMOD
+GPIO signals 0-15 of the Didactic are connected to two PMOD (PMOD A and PMODB) connectors and level shifted to 3.3V using bidirectional auto direction sensing level shifters. These level sifters are always enabled. PMOD connector IO signal pinouts are shown below.
+
+|PMOD A                   |
+|-------------------------|
+|Didactic    |PMOD        |
+|------------|------------|
+|GPIO0       |IO1         |
 
 ## Power monitor MCU
 Microcontroller on the board is used to monitor and sequence the power rails and control the clock generator. The Didactic can be started by pressing the PWR button or the start-up process can be controlled using the microcontrollers virtual COM port. The COM port can be accessed by connecting a Mini-USB cable to the MCU USB port.
