@@ -47,14 +47,33 @@ JTAG and UART signals are also level shifted using separate unidirectional level
 
 ### Didactic 1.8V IO
 All Didactic 1.8V IO is directly accessible on pin headers J201, J202, J601 and J603. All analog pins 32-50 of Didactic are connected to ground using 0-ohm resistors. N BIAS and P BIAS are connected to ground using JP601 and JP602 jumpers.
+
 ### PMOD
 GPIO signals 0-15 of the Didactic are connected to two PMOD (PMOD A and PMODB) connectors and level shifted to 3.3V using bidirectional auto direction sensing level shifters. These level sifters are always enabled. PMOD connector IO signal pinouts are shown below.
 
-|PMOD A                   |
-|-------------------------|
-|Didactic    |PMOD        |
+PMOD A pinoout:
+|Didactic    |PMOD A      |
 |------------|------------|
 |GPIO0       |IO1         |
+|GPIO1       |IO2         |
+|GPIO2       |IO3         |
+|GPIO3       |IO4         |
+|GPIO4       |IO5         |
+|GPIO5       |IO6         |
+|GPIO6       |IO7         |
+|GPIO7       |IO8         |
+
+PMOD B pinoout:
+|Didactic    |PMOD B      |
+|------------|------------|
+|GPIO8       |IO1         |
+|GPIO9       |IO2         |
+|GPIO10      |IO3         |
+|GPIO11      |IO4         |
+|GPIO12      |IO5         |
+|GPIO13      |IO6         |
+|GPIO14      |IO7         |
+|GPIO15      |IO8         |
 
 ## Power monitor MCU
 Microcontroller on the board is used to monitor and sequence the power rails and control the clock generator. The Didactic can be started by pressing the PWR button or the start-up process can be controlled using the microcontrollers virtual COM port. The COM port can be accessed by connecting a Mini-USB cable to the MCU USB port.
@@ -67,5 +86,26 @@ The microcontroller will continuously print the voltage and current of all the p
 ![Didactic PCB](./Figures/Virtual_terminal.png)
 
 ### Commands
+Power rails and the clock can be controlled by writing commands to the virtual terminal. All supported commands are shown below.
+
+|Command          |Parameters                             |Explanation                                                                                                                              |
+|-----------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+|pwr              |                                       |Turns on/off all the power rails and clock. Same as pressing the PWR button                                                              |
+|nofault          |                                       |Disables/enables fault checking for all power rails. Status LED will blink quickly when power is enabled, and fault checking is disabled |
+|enableX          |X = power rail ID                      |Enabled power rail*                                                                                                                      |
+|disableX         |X = power rail ID                      |Disable power rail*                                                                                                                      |
+|clkX             |X = 0 or X = 1                         |Enabled or disable clock. 1 = enable                                                                                                     |
+|cspeed           |10000 < X < 125000000                  |Set requested clock speed. clk1 command must be sent after this command to enable clock with requested speed                             |
+|rstX             |X = 0 or X = 1                         |Set Didactic reset LOW or HIGH, LOW = reset                                                                                              |
+|settvYX          |Y = power rail ID, 0 mV <= X <= 3300 mV|Set power rail’s target voltage                                                                                                          |
+|setmcYX          |Y = power rail ID, 0 mA <= X <= 1000 mA|Set power rail’s maximum current                                                                                                         |
+|settolYX         |Y = power rail ID, 0 mV <= X <= 3300 mV|Set power rail’s tolerance to voltage difference between target and actual voltage                                                       |
+|save             |                                       |Save current config to Flash                                                                                                             |
+|load             |                                       |Load config from flash                                                                                                                   |
+|default          |                                       |Load default config                                                                                                                      |
+|restart          |                                       |Shutdown all power rails and restart the MCU                                                                                             |
+
+*IO and Core power rails source their power from 3.3V IO power rails, so they cannot be powered before 3.3V IO power rails. IO and Core can be enabled before 3.3V IO power rails but they will be powered only after 3.3V IO has been powered. 
+
 ### Programming
 The microcontroller can be programmed using ST-LINK debugger using SWD interface. This can be done using 4-pin pin header (J405) or 6-pin TC2030 Tag-Connect cable.
