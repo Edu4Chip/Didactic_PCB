@@ -13137,7 +13137,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER_PART_NUMBER" "APHD1608LSURCK "
+		(property "MANUFACTURER_PART_NUMBER" "APHD1608LCGCK"
 			(at 179.07 146.05 0)
 			(effects
 				(font

@@ -46,7 +46,7 @@
 			)
 		)
 		(instances
-			(project "Didactic"
+			(project "Didactic_main_PCB"
 				(path "/7ab892e7-3c9a-46a9-9f0b-960844e008c7"
 					(page "2")
 				)
@@ -88,7 +88,7 @@
 			)
 		)
 		(instances
-			(project "Didactic"
+			(project "Didactic_main_PCB"
 				(path "/7ab892e7-3c9a-46a9-9f0b-960844e008c7"
 					(page "3")
 				)
@@ -130,7 +130,7 @@
 			)
 		)
 		(instances
-			(project "Didactic"
+			(project "Didactic_main_PCB"
 				(path "/7ab892e7-3c9a-46a9-9f0b-960844e008c7"
 					(page "4")
 				)
@@ -172,7 +172,7 @@
 			)
 		)
 		(instances
-			(project "Didactic"
+			(project "Didactic_main_PCB"
 				(path "/7ab892e7-3c9a-46a9-9f0b-960844e008c7"
 					(page "6")
 				)
@@ -214,7 +214,7 @@
 			)
 		)
 		(instances
-			(project "Didactic"
+			(project "Didactic_main_PCB"
 				(path "/7ab892e7-3c9a-46a9-9f0b-960844e008c7"
 					(page "7")
 				)
@@ -265,7 +265,7 @@
 			)
 		)
 		(instances
-			(project "Didactic"
+			(project "Didactic_main_PCB"
 				(path "/7ab892e7-3c9a-46a9-9f0b-960844e008c7"
 					(page "5")
 				)
